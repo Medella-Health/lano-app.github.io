@@ -87,16 +87,7 @@ p {
 }
 
 
-/*
-@media(min-width:691px){
-  .contact1{
-    display:none;
-  }
-  .contact2{
-    display:block;
-  }
-}
-*/
+
 
 @media(max-width:745px){
   .contact2{
@@ -108,8 +99,8 @@ p {
   .contact1{
     display:none;
   }
- 
 }
+
 #contactus{
   font-size: 40px;
 }
@@ -144,13 +135,7 @@ p {
   margin:0 auto;
 }}
 
-#prodspec{
-  color:#052E44;
-  font-size: 100px;
-  letter-spacing: 10px;
-  font-weight: bold;
-  line-height: 100px;
-}
+
 #howitworks{
   letter-spacing: 8px;
 }
@@ -285,9 +270,9 @@ header {
 
 @media(max-width:500px){
   .contact-text{
-    font-size: 15px;
+    font-size: 13px;
   }
-}
+  }
 
 .whitify{
   color:white;
@@ -343,24 +328,51 @@ header .header-content .header-content-inner h1 {
 }
 
 @media(max-width:480px){
-  #break1{
+  .break1{
     display:none;
   }
 }
 
+
+@media(min-width:530px){
+#prodspec{
+  color:#052E44;
+  font-size: 100px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  line-height: 100px;
+}
+}
+
 @media(max-width:529px){
   #prodspec{
+    color:#052E44;
     font-size: 80px;
+
   }
+  .header2{
+    display:none;
+  }
+
+ 
 }
+
 
 @media(max-width:448px){
   #prodspec{
+    color:#052E44;
     font-size: 60px;
   }
   #lanobox{
-    height: 250px;
-    width:373px;
+    height: 53vw;
+    width:80vw;
+  }
+}
+
+@media(min-width:320px)and(max-width:360px){
+  #prodspec{
+    color:#052E44;
+    font-size:10px;
   }
 }
 
@@ -415,9 +427,15 @@ header .header-content .header-content-inner h1 {
 }
 }
 
-@media(min-width: 1016px) and (max-width: 2000px){
+@media(min-width: 1028px) and (max-width: 2000px){
   #homeHeading {
     font-size:60px;
+  }
+}
+
+@media(max-width:830px){
+  .header1{
+    display:none;
   }
 }
 
