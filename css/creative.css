@@ -243,7 +243,11 @@ aside {
     color: #0D8DB4;
   }
 }
-header {
+
+
+
+@media(min-width: 691px){
+  header {
   position: relative;
   
   height:80%;
@@ -259,13 +263,40 @@ header {
     ),
     /* bottom, image */
     url('../img/beauty2.jpg');
-    background-size:     cover;                      /* <------ */
+    background-size:     cover ;                      /* <------ */
     background-repeat:   no-repeat;
-    background-position: center center; 
+    background-position:center;
 
   text-align: center;
   color: #ecebf1;
 
+}
+}
+@media(max-width: 690px){
+  header {
+  position: relative;
+  
+  height:80%;
+  width:100%;
+
+  
+
+  background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(7, 78, 114, 0.55), 
+      rgba(7, 78, 114, 0.65)
+    ),
+    /* bottom, image */
+    url('../img/beauty2.jpg');
+    background-size:     cover ;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position:left;
+
+  text-align: center;
+  color: #ecebf1;
+
+}
 }
 
 @media(max-width:500px){
@@ -278,11 +309,8 @@ header {
   color:white;
 }
 
-.btn-xl {
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 10px;
-}
+
+
 
 @media(max-height:590px){
   .rights1{
@@ -294,6 +322,34 @@ header {
   .rights1{
     display:none;
   }
+}
+
+@media(max-height:555px){
+  .contact4{
+    display:none;
+  }
+  .btn-xl {
+    padding: 8px 15px;
+    font-size: 5px;
+    border-radius: 10px;
+}
+.button-text{
+  font-size:15px;
+  font-weight: light;
+}
+
+}
+
+@media(min-height: 556px){
+  .btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.button-text{
+  font-size:18px;
+  font-weight: light;
+}
 }
 
 #contact{
@@ -382,7 +438,7 @@ header .header-content .header-content-inner h1 {
 @media(min-width:320px)and(max-width:360px){
   #prodspec{
     color:#052E44;
-    font-size:10px;
+    font-size:40px;
   }
 }
 
@@ -698,14 +754,9 @@ fieldset[disabled] .btn-primary.active {
   font-weight: 700;
   text-transform: uppercase;
 }
-.btn-xl {
-  padding: 10px 30px;
-}
 
-.button-text{
-  font-size:18px;
-  font-weight: light;
-}
+
+
 ::-moz-selection {
   color: white;
   text-shadow: none;
