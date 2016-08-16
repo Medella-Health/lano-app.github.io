@@ -284,7 +284,17 @@ header {
     border-radius: 10px;
 }
 
+@media(max-height:590px){
+  .rights1{
+    display:block;
+  }
+}
 
+@media(min-height:591px){
+  .rights1{
+    display:none;
+  }
+}
 
 #contact{
   background:
