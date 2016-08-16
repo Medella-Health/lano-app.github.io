@@ -96,7 +96,6 @@ p {
     display:block;
   }
 }
-
 */
 
 @media(max-width:745px){
@@ -124,6 +123,27 @@ p {
 .modal-md{
   width:30vw;
 }
+
+@media(max-width:461px){
+  .modal-md{
+  width:80vw;
+  margin:0 auto;
+}
+
+}
+@media(min-width: 1032px){
+.modal-md{
+  width:30vw;
+  margin:0 auto;
+}
+}
+
+@media(max-width:760px) and (min-width:462px){
+  .modal-md{
+  width:60vw;
+  margin:0 auto;
+}}
+
 #prodspec{
   color:#052E44;
   font-size: 100px;
