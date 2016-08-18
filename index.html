@@ -8,6 +8,7 @@
         <meta name="author" content="">
         <title>Lano
         </title>
+
         <link rel="shortcut icon" href="tint.ico" />
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+
+        <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyC5qFN2qVn4dksTT8BUwjndiUYkv82ZZ9s",
+        authDomain: "lanoapp-com.firebaseapp.com",
+        databaseURL: "https://lanoapp-com.firebaseio.com",
+        storageBucket: "lanoapp-com.appspot.com",
+        };
+        firebase.initializeApp(config);
+        </script>
     </head>
     <body id="page-top">
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="display: none">
@@ -216,15 +232,15 @@
                                         <input type="text" class="form-control" id="rname">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rblah" class="form-control-label">Email</label>
-                                        <textarea class="form-control" id="rblah"></textarea>
+                                        <label for="remail" class="form-control-label">Email</label>
+                                        <textarea class="form-control" id="remail"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="rage" class="form-control-label">Message:</label>
-                                        <textarea class="form-control" id="rage"></textarea>
+                                        <label for="rmessage" class="form-control-label">Message:</label>
+                                        <textarea class="form-control" id="rmessage"></textarea>
                                     </div>
                                     
-                                    <button class="btn btn-primary btn-large ">Submit</button>
+                                    <button class="btn btn-primary btn-large" id="researcherBtn" href="#">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -242,19 +258,19 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="rname" class="form-control-label">Name</label>
-                                        <input type="text" class="form-control" id="rname">
+                                        <label for="pname" class="form-control-label">Name</label>
+                                        <input type="text" class="form-control" id="pname">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rblah" class="form-control-label">Email</label>
-                                        <textarea class="form-control" id="rblah"></textarea>
+                                        <label for="pemail" class="form-control-label">Email</label>
+                                        <textarea class="form-control" id="pemail"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="rage" class="form-control-label">Message:</label>
-                                        <textarea class="form-control" id="rage"></textarea>
+                                        <label for="pmessage" class="form-control-label">Message:</label>
+                                        <textarea class="form-control" id="pmessage"></textarea>
                                     </div>
                                     
-                                    <button class="btn btn-primary btn-large ">Submit</button>
+                                    <button class="btn btn-primary btn-large" id="patientBtn" href="#">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -272,19 +288,19 @@
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="rname" class="form-control-label">Name</label>
-                                        <input type="text" class="form-control" id="rname">
+                                        <label for="cname" class="form-control-label">Name</label>
+                                        <input type="text" class="form-control" id="cname">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rblah" class="form-control-label">Email</label>
-                                        <textarea class="form-control" id="rblah"></textarea>
+                                        <label for="cemail" class="form-control-label">Email</label>
+                                        <input class="form-control" id="cemail" ></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="rage" class="form-control-label">Message:</label>
-                                        <textarea class="form-control" id="rage"></textarea>
+                                        <label for="cmessage" class="form-control-label">Message:</label>
+                                        <textarea class="form-control" id="cmessage"></textarea>
                                     </div>
                                     
-                                    <button class="btn btn-primary btn-large ">Submit</button>
+                                    <button type="button" class="btn btn-primary btn-large" id="clinicianBtn" href="#">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -309,28 +325,14 @@
         <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
         <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
         
-        <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-        <script>
-        // Initialize Firebase
-        var config = {
-        apiKey: "AIzaSyA3HxU7xxrxenbQAvIAoGXar_y33EcG_eM",
-        authDomain: "lano-landing-page.firebaseapp.com",
-        databaseURL: "https://lano-landing-page.firebaseio.com",
-        storageBucket: "lano-landing-page.appspot.com",
-        };
-        firebase.initializeApp(config);
-        var storage = firebase.storage();
-        var storageRef = storage.ref();
-        </script>
-        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        
         <!-- Leave out Storage -->
         <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-storage.js"></script> -->
         
         
         <!-- Theme JavaScript -->
         <script src="js/creative.js"></script>
+        <script defer src="js/firebase.js"></script>
         
     </body>
 </html>
